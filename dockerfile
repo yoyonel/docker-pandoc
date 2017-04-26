@@ -40,9 +40,10 @@ RUN curl -L \
 # 	fc-cache -f -v
 
 # Fonctionne et patchée en plus :p
+# url: https://askubuntu.com/questions/241975/why-cant-i-install-fonts-system-wide
 RUN wget https://github.com/stefano-meschiari/dotemacs/raw/master/SourceCodePro%2BPowerline%2BAwesome%2BRegular.ttf && \
 	mkdir -p ~/.fonts/. && \
-	cp SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts/.
+	cp SourceCodePro+Powerline+Awesome+Regular.ttf /usr/share/fonts/.
 # COPY fonts/SourceCodePro+Powerline+Awesome+Regular.ttf ~/.fonts/.
 
 # Mise à jour du cache des fonts
